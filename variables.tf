@@ -14,8 +14,8 @@ variable "region" {
 variable "enabled" {
   description = "Versioning for the bucket is enabled if set true"
   type        = bool
-}/*
+}
 variable "role_arn" {
   description = " The ARN of the IAM role"
   type = string
-}*/
+}
