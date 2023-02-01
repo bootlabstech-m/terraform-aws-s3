@@ -1,6 +1,6 @@
 variable "no_of_buckets" {
   description = "No of buckets to be created."
-  type        = list(string)
+  type        = number
 }
 variable "bucket_name" {
   description = "The name of the bucket. If omitted, Terraform will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. "
@@ -14,8 +14,8 @@ variable "region" {
 variable "enabled" {
   description = "Versioning for the bucket is enabled if set true"
   type        = bool
-}
+}/*
 variable "role_arn" {
   description = " The ARN of the IAM role"
   type = string
-}
+}*/
