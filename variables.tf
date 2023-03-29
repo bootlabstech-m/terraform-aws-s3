@@ -12,10 +12,15 @@ variable "region" {
   type        = string
 }
 variable "enabled" {
-  description = "Versioning for the bucket is enabled if set true"
-  type        = bool
+  description = "Versioning for the bucket is enabled if set true (Enabled/Disabled)"
+  type        = string
 }
 variable "role_arn" {
   description = " The ARN of the IAM role"
   type = string
+}
+variable "block_public_acls" {
+  description = "To block all bucket public access"
+  type = bool
+  default = true
 }
