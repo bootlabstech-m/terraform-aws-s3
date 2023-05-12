@@ -27,6 +27,7 @@ resource "aws_s3_bucket" "s3bucket" {
 
 
 resource "aws_s3_bucket_versioning" "versioning_example" {
+  count  = var.no_of_buckets
   bucket = aws_s3_bucket.s3bucket[count.index].id
   versioning_configuration {
     status = var.enabled
