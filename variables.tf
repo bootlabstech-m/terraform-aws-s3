@@ -11,8 +11,8 @@ variable "region" {
   description = "The region where the bucket is created"
   type        = string
 }
-variable "enabled" {
-  description = "Versioning for the bucket is enabled if set true (Enabled/Disabled)"
+variable "versioning_enabled" {
+  description = "Versioning for the bucket is enabled if set true (Enabled/Disabled/Suspended)"
   type        = string
 }
 variable "role_arn" {
