@@ -25,7 +25,7 @@ resource "aws_s3_bucket_public_access_block" "example" {
   restrict_public_buckets = true
 }
 resource "aws_s3_bucket_server_side_encryption_configuration" "encrption-s3" {
-  bucket = aws_s3_bucket.s3bucket.id
+  bucket = aws_s3_bucket.s3bucket[count.index].id
 
   rule {
     apply_server_side_encryption_by_default {
